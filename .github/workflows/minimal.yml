@@ -24,5 +24,5 @@ jobs:
         ls /cvmfs/cms-opendata-conddb.cern.ch/
     - name: Run container
       run: |
-        docker run -v $(pwd):/mnt/vol -v /cvmfs:/cvmfs:shared -w /home/cmsusr gitlab-registry.cern.ch/cms-cloud/cmssw-docker/cmssw_4_4_7-slc5_amd64_gcc434:2020-11-19-89e805d7 /bin/bash /mnt/vol/commands.sh
+        docker run -v $(pwd):/mnt/vol -v /cvmfs:/cvmfs:shared -w /home/cmsusr gitlab-registry.cern.ch/cms-cloud/cmssw-docker/slc5-cms:latest /bin/bash /mnt/vol/commands.sh
      
