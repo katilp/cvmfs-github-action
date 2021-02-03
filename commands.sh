@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+echo $SHELL
 cat $HOME/.bashrc
 source ~/.bashrc
 alias cmsenv='eval `scramv1 runtime -sh`'
