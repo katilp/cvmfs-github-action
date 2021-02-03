@@ -7,8 +7,12 @@ alias cmsenv='eval `scramv1 runtime -sh`'
 alias cmsrel='scramv1 project CMSSW'
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
+# These two give an error message:"
 cmsenv
 cmsrel CMSSW_4_4_7
+# Use explicit scramv1 commands instead:
+eval `scramv1 runtime -sh`
+scramv1 project CMSSW CMSSW_4_4_7
 cd CMSSW_4_4_7/src
 mkdir HiForest
 cd HiForest
