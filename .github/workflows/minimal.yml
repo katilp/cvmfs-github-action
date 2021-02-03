@@ -1,0 +1,19 @@
+name: ubuntu
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: cvmfs-contrib/github-action-cvmfs@main
+      with:
+        run_local_checkout: 'true'
+    - name: Test CernVM-FS
+      run: |
+        echo "### Dump default.local ###"
+        cat /etc/cvmfs/default.local
+        echo "### Test /cvmfs/cms.cern.ch ###"
+        ls /cvmfs/cms.cern.ch
+        echo "### /cvmfs/cms-opendata-conddb.cern.ch/ ###"
+        ls /cvmfs/cms-opendata-conddb.cern.ch/
+     
