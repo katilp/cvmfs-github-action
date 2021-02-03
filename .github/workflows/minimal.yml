@@ -4,10 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: cvmfs-contrib/github-action-cvmfs@main
-      with:
-        run_local_checkout: 'true'
+    - uses: cvmfs-contrib/github-action-cvmfs@v2
     - name: Test CernVM-FS
       run: |
         echo "### Dump default.local ###"
