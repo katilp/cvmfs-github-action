@@ -4,10 +4,9 @@ cat $HOME/.bashrc
 source ~/.bashrc
 alias cmsenv='eval `scramv1 runtime -sh`'
 alias cmsrel='scramv1 project CMSSW'
+source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 cmsrel CMSSW_4_4_7
-eval `scramv1 runtime -sh`
-scramv1 project CMSSW CMSSW_4_4_7
 cd CMSSW_4_4_7/src
 mkdir HiForest
 cd HiForest
