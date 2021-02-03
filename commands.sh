@@ -2,6 +2,8 @@
 
 cat $HOME/.bashrc
 source ~/.bashrc
+alias cmsenv='eval `scramv1 runtime -sh`'
+alias cmsrel='scramv1 project CMSSW'
 
 cmsrel CMSSW_4_4_7
 cd CMSSW_4_4_7/src
