@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 cat $HOME/.bashrc
+source ~/.bashrc
 
 cmsrel CMSSW_4_4_7
 cd CMSSW_4_4_7/src
