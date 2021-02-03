@@ -1,4 +1,5 @@
 #!/bin/sh -l
+cmsrel CMSSW_4_4_7
 echo  "### pwd ###"
 pwd
 echo  "### ls -l ###"
