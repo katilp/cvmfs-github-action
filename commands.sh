@@ -6,6 +6,7 @@ source ~/.bashrc
 alias cmsenv='eval `scramv1 runtime -sh`'
 alias cmsrel='scramv1 project CMSSW'
 source /cvmfs/cms.cern.ch/cmsset_default.sh
+cat /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 cmsrel CMSSW_4_4_7
 cd CMSSW_4_4_7/src
