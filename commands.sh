@@ -18,9 +18,13 @@ cmsenv
 cmsrel CMSSW_4_4_7
 echo "### ls -l ###"
 ls -l
+echo "### Check alias ###"
+alias
 echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 # This should have been all done at the start-up according to the message, but doing it again
 source /cvmfs/cms.cern.ch/cmsset_default.sh
+echo "### Check alias ###"
+alias
 echo "### Check again cmsenv and cmsrel ###"
 # These two give an error message:
 cmsenv
