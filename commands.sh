@@ -1,13 +1,17 @@
 #!/bin/sh -l
 
 echo $SHELL
-echo whoami
+echo "### whomai ###"
+whoami
+echo "### ls -l ###"
 ls -l /
+echo "### ls -l /cvmfs/cms-opendata-conddb.cern.ch/ ###"
+ls -l  /cvmfs/cms-opendata-conddb.cern.ch/
+echo "### $HOME/.bashrc ###"
 cat $HOME/.bashrc
 source ~/.bashrc
-alias cmsenv='eval `scramv1 runtime -sh`'
-alias cmsrel='scramv1 project CMSSW'
 source /cvmfs/cms.cern.ch/cmsset_default.sh
+echo "cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
 # These two give an error message:"
 cmsenv
@@ -36,5 +40,3 @@ echo  "### pwd ###"
 pwd
 echo  "### ls -l ###"
 ls -l
-echo "### ls /cvmfs/cms-opendata-conddb.cern.ch/ ###"
-ls /cvmfs/cms-opendata-conddb.cern.ch/
