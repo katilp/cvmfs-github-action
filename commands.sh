@@ -3,17 +3,20 @@
 echo $SHELL
 echo "### whomai ###"
 whoami
-echo "### ls -l ###"
+echo "### ls -l / ###"
 ls -l /
-echo "### ls -l /cvmfs/cms-opendata-conddb.cern.ch/ ###"
-ls -l  /cvmfs/cms-opendata-conddb.cern.ch/
-echo "### $HOME/.bashrc ###"
+echo "### ls -l /cvmfs/cms.cern.ch/ ###"
+ls -l  /cvmfs/cms.cern.ch/
+echo "### ls -l /cvmfs/cms.cern.ch/cmsset_default.sh ###"
+ls -l  /cvmfs/cms.cern.ch/cmsset_default.sh
+echo "### cat $HOME/.bashrc ###"
 cat $HOME/.bashrc
+echo "### cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
+cat /cvmfs/cms.cern.ch/cmsset_default.sh
+# This should have been all done at the start-up according to the message, but doing it again
 source ~/.bashrc
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-echo "cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
-cat /cvmfs/cms.cern.ch/cmsset_default.sh
-# These two give an error message:"
+# These two give an error message:
 cmsenv
 cmsrel CMSSW_4_4_7
 # Use explicit scramv1 commands instead:
