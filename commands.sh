@@ -13,9 +13,11 @@ echo "### cat $HOME/.bashrc ###"
 cat $HOME/.bashrc
 echo "### cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
-echo "### Check ii cmenv and  cmsrel command work ###"
+echo "### Check if cmsenv and  cmsrel commands work ###"
 cmsenv
 cmsrel CMSSW_4_4_7
+echo "### ls -l ###"
+ls -l
 echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 # This should have been all done at the start-up according to the message, but doing it again
 source /cvmfs/cms.cern.ch/cmsset_default.sh
