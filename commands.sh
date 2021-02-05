@@ -41,6 +41,9 @@ cd HiForestProducer
 
 scram b -j8
 
+ln -sf /cvmfs/cms-opendata-conddb.cern.ch/GR_R_44_V15 GR_R_44_V15
+ln -sf /cvmfs/cms-opendata-conddb.cern.ch/GR_R_44_V15.db GR_R_44_V15.db
+
 if [ -z "$1" ]; then nev=100; else nev=$1; fi
 if [ -z "$2" ]; then config=hiforestanalyzer_cfg.py; else config=$2; fi
 # set the number of events
