@@ -31,9 +31,9 @@ cmsenv
 cmsrel CMSSW_4_4_7
 echo "### set them explicitly with scramv1 ###"
 # Use explicit scramv1 commands instead:
-eval `scramv1 runtime -sh`
 scramv1 project CMSSW CMSSW_4_4_7
 cd CMSSW_4_4_7/src
+eval `scramv1 runtime -sh`
 mkdir HiForest
 cd HiForest
 git clone -b 2011 git://github.com/cms-opendata-analyses/HiForestProducerTool.git HiForestProducer
