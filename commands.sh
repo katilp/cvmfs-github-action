@@ -13,12 +13,17 @@ echo "### cat $HOME/.bashrc ###"
 cat $HOME/.bashrc
 echo "### cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
+echo "### Check ii cmenv and  cmsrel command work ###"
+cmsenv
+cmsrel CMSSW_4_4_7
+echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 # This should have been all done at the start-up according to the message, but doing it again
-source ~/.bashrc
 source /cvmfs/cms.cern.ch/cmsset_default.sh
+echo "### Check again cmsenv and cmsrel ###"
 # These two give an error message:
 cmsenv
 cmsrel CMSSW_4_4_7
+echo "### set them explicitly with scramv1 ###"
 # Use explicit scramv1 commands instead:
 eval `scramv1 runtime -sh`
 scramv1 project CMSSW CMSSW_4_4_7
