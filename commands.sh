@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+sudo chown $USER /mnt/vol
 echo $SHELL
 echo "### whomai ###"
 whoami
