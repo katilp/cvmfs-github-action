@@ -24,7 +24,7 @@ jobs:
         ls /cvmfs/cms-opendata-conddb.cern.ch/
     - name: Run container
       run: |
-        docker run -v $(pwd):/mnt/vol -v /cvmfs:/cvmfs:shared -w /home/cmsusr gitlab-registry.cern.ch/cms-cloud/cmssw-docker/slc5-cms:latest /bin/bash /mnt/vol/commands.sh
+        docker run -v $(pwd):/mnt/vol -v /cvmfs:/cvmfs:shared -w /home/cmsusr gitlab-registry.cern.ch/cms-cloud/cmssw-docker/slc5-cms:latest /bin/bash /mnt/vol/commands.sh 100000
         cp *.png outputs
   # upload output file
     - name: Upload artifact
