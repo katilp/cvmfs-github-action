@@ -23,17 +23,17 @@ echo "### Check if scramv1 command work without sourcing cmsset_default.sh ###"
 scramv1 project CMSSW CMSSW_4_4_7
 echo "### ls -l ###"
 ls -l
-echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
+# echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 # This should have been all done at the start-up according to the message, but doing it again
-source /cvmfs/cms.cern.ch/cmsset_default.sh
-echo "### Check alias ###"
-alias
-echo "### Check again cmsrel ###"
+# source /cvmfs/cms.cern.ch/cmsset_default.sh
+# echo "### Check alias ###"
+# alias
+# echo "### Check again cmsrel ###"
 # This gives an error message even if alias is set:
-cmsrel CMSSW_4_4_7
-echo "### use scramv1 ###"
+# cmsrel CMSSW_4_4_7
+# echo "### use scramv1 ###"
 # Use explicit scramv1 commands instead:
-scramv1 project CMSSW CMSSW_4_4_7
+# scramv1 project CMSSW CMSSW_4_4_7
 cd CMSSW_4_4_7/src
 eval `scramv1 runtime -sh`
 mkdir HiForest
