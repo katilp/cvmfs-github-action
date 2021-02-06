@@ -25,4 +25,10 @@ jobs:
     - name: Run container
       run: |
         docker run -v $(pwd):/mnt/vol -v /cvmfs:/cvmfs:shared -w /home/cmsusr gitlab-registry.cern.ch/cms-cloud/cmssw-docker/slc5-cms:latest /bin/bash /mnt/vol/commands.sh
-     
+        cp *.png outputs
+  # upload output file
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: outputs/  
