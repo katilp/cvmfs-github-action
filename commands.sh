@@ -13,8 +13,7 @@ echo "### cat $HOME/.bashrc ###"
 cat $HOME/.bashrc
 echo "### cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
-echo "### Check if cmsenv and  cmsrel commands work ###"
-cmsenv
+echo "### Check if cmsrel commands works ###"
 cmsrel CMSSW_4_4_7
 echo "### ls -l ###"
 ls -l
@@ -25,11 +24,10 @@ echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 echo "### Check alias ###"
 alias
-echo "### Check again cmsenv and cmsrel ###"
-# These two give an error message:
-cmsenv
+echo "### Check again cmsrel ###"
+# This gives an error message even if alias is set:
 cmsrel CMSSW_4_4_7
-echo "### set them explicitly with scramv1 ###"
+echo "### use scramv1 ###"
 # Use explicit scramv1 commands instead:
 scramv1 project CMSSW CMSSW_4_4_7
 cd CMSSW_4_4_7/src
