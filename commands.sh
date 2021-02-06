@@ -13,12 +13,16 @@ echo "### cat $HOME/.bashrc ###"
 cat $HOME/.bashrc
 echo "### cat /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 cat /cvmfs/cms.cern.ch/cmsset_default.sh
-echo "### Check if cmsrel commands works ###"
+echo "### Check if cmsrel command works ###"
 cmsrel CMSSW_4_4_7
 echo "### ls -l ###"
 ls -l
 echo "### Check alias ###"
 alias
+echo "### Check if scramv1 command work without sourcing cmsset_default.sh ###"
+scramv1 project CMSSW CMSSW_4_4_7
+echo "### ls -l ###"
+ls -l
 echo "### Do again source /cvmfs/cms.cern.ch/cmsset_default.sh ###"
 # This should have been all done at the start-up according to the message, but doing it again
 source /cvmfs/cms.cern.ch/cmsset_default.sh
